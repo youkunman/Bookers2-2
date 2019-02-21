@@ -1,0 +1,32 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <ul>error
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+  <%= form_for(@user) do |f| %>
+    <div class="field">
+      <label for="user_name">Name <%= f.text_field :name, class: "name" %></label>
+    </div>
+    <div class="field">
+      <label for="user_image">Image</label>
+      <%= f.attachment_field :image, format: 'jpeg', class: "user_image" %>
+    </div>
+    <div class="field">
+　　 　<label for="user_introduction">Introduction <%= f.text_area :body, class: "introduction" %></label>
+    </div>
+     <%= f.submit 'Update User' %>
+   <% end %>
+  </div>
+<footer>
+<div class="container">
+　<div class="col-xs-3 col-xs-offset-9">
+　 <p>CopyRight Infratop.inc</p>
+</div>
+</div>
+</footer>
