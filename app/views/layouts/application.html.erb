@@ -20,7 +20,7 @@
             <% if user_signed_in? %>
            <%= link_to " Home",user_path(current_user.id),class: "glyphicon glyphicon-home home" %>
            <%= link_to"Users","/users", class: "glyphicon glyphicon-user users" %>
-           <%=link_to "books","/books",class: "glyphicon glyphicon-book books" %>
+           <%=link_to "Books","/books",class: "glyphicon glyphicon-book books" %>
            <%= link_to "  logout",destroy_user_session_path,method: :delete,class: "glyphicon glyphicon-log-out logout logout" %>
             <% else %>
            <%= link_to " Home",new_user_path,class: "glyphicon glyphicon-home home" %>

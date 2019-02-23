@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :authenticate_user!, except: [:about, :new]
+before_action :authenticate_user!, except: [:about, :new, :edit]
   def about
 
   end
