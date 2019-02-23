@@ -25,6 +25,7 @@
            	  <td><span>
                 <%= link_to user_path(@user), class: "user_#{@user.id}" do %>
                   <%= attachment_image_tag @user, :image, :fill, 100, 100, fallback: 'no_image.jpeg', :size => '50x50' %>
+                  <%=  content_tag :p ,@user.name %>
                 <% end %>
               </span></td>
            	  <td><span><%= link_to @bookn.title, book_path(@bookn.id), class: "book_#{@bookn.id}" %></span></td>
